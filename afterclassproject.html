@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After class project</title>
+</head>
+<body>
+    <h2>Array sorting and mapping</h2>
+    <p id="p1"></p>
+    <button onclick="ascending()">Ascending</button>
+    <p id="p2"></p>
+    <button onclick="descending()">Descending</button>
+    <p id="p3"></p>
+    <script>
+        var num = [3, 7, 1, 8, 2];
+        function addition(a){
+            return a+10;
+        }
+        var newarray = num.map(addition);
+        document.getElementById("p1").innerHTML = newarray;
+        function ascending() {
+                num.sort(function (a, b) { return a - b });
+                document.getElementById("p2").innerHTML = newarray;
+            }
+            function descending() {
+                num.sort(function (a, b) { return b - a });
+                document.getElementById("p3").innerHTML = newarray;
+            }
+    </script>
+</body>
+</html>
