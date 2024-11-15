@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity 2</title>
+</head>
+<body>
+    <h2>Mapping in JS</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        var num = [3, 7, 1, 8, 2];
+            function multiply(a) {
+                return a * 10;
+            }
+            var newarray = num.map(multiply);
+            document.getElementById("p1").innerHTML = "Orignal array is " + num;
+            document.getElementById("p2").innerHTML = "New array is " + newarray;
+            
+        var persons = [{firstname:"Tabassum", lastname:"Jahagirdar" },
+            { firstname: "Esa", lastname: "Rizvi" },
+            { firstname: "Kushagraa ", lastname: "Jain" }];
+        function getfullname(item){
+                return [item.firstname+item.lastname].join("   ");
+            }
+            var newarr1 = persons.map(getfullname);
+            document.getElementsById("p3").innerHTML = newarr1;
+    </script>
+</body>
+</html>
